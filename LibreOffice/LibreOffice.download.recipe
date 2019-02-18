@@ -25,10 +25,15 @@ LibreOffice Fresh is the stable version with the most recent features. Users int
 			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+				<dict>
+                    <key>user-agent</key>
+                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36</string>
+                </dict>
 				<key>re_pattern</key>
-				<string>(?P&lt;DOWNLOAD_URL&gt;download.documentfoundation.org/libreoffice/stable/[\d\.]+/mac/x86_64/LibreOffice_(?P&lt;version&gt;[\d\.]+)_MacOS_x86-64.dmg)</string>
+				<string>www.libreoffice.org/donate/dl/mac-x86_64/[\d\.]+/en-US/LibreOffice_(?P&lt;version&gt;[\d\.]+)_MacOS_x86-64.dmg</string>
 				<key>url</key>
-				<string>https://www.libreoffice.org/download/libreoffice-%RELEASE%/?type=mac-x86_64</string>
+				<string>https://www.libreoffice.org/download/download</string>
 			</dict>
 		</dict>
 		<dict>
@@ -37,7 +42,7 @@ LibreOffice Fresh is the stable version with the most recent features. Users int
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://%DOWNLOAD_URL%</string>
+				<string>https://download.documentfoundation.org/libreoffice/stable/%version%/mac/x86_64/LibreOffice_%version%_MacOS_x86-64.dmg</string>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 			</dict>
